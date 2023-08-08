@@ -59,7 +59,7 @@ This is the backend API for the Send Money application, built with Laravel 10 an
 
    ```
 
-   This command will truncate existing data in the bank, user, account, and provider tables and populate them with additional demo data. The is_active and is_disabled columns of the bank and provider tables will have random values.
+   This command will truncate existing data in the bank, user, account, and provider tables and populate them with additional demo data. The is_active and is_disabled columns of the bank and provider tables will have random values but for InstaPay and PesoPay they are always active not disabled.
 
    If you want to exclude additional data, you can run specific seeders using:
 
@@ -81,7 +81,7 @@ This is the backend API for the Send Money application, built with Laravel 10 an
 
 To start the Laravel development server, run the following command:
 
-    ``bash php artisan serve``
+    php artisan serve
 
 This will start the API on the default port `8000`. You can access the API at `http://localhost:8000`.
 
