@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "75a6c63b-2304-4efa-9562-db9d162e15d5",
+		"name": "Send Money App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9481265",
+		"_collection_link": "https://grey-rocket-347069.postman.co/workspace/data-api~5dd3ce9b-40de-4a52-b0a9-42368deacf01/collection/9481265-75a6c63b-2304-4efa-9562-db9d162e15d5?action=share&creator=9481265&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"wrollen0320@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"wrollen0320@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:34:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:34:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTE1MDE2NDAsImV4cCI6MTY5MTUwNTI0MCwibmJmIjoxNjkxNTAxNjQwLCJqdGkiOiJpdDROelJqaE80TjNtWXpVIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mo-zoTWYohSjnOXwD0E58g3Ns4B5MclZ03ee-COb2o4\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTEzNDA3MzIsImV4cCI6MTY5MTM0NDMzMiwibmJmIjoxNjkxMzQwNzMyLCJqdGkiOiJEYWJlbHlHbE84NmFFSXNWIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.fO7rd9POtllU1-j5e7zHeykZbQI7J98EEkaKaPy6nB8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "me sample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/auth/me",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:34:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:34:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Wrollen Austria\",\n    \"email\": \"wrollen0320@gmail.com\",\n    \"email_verified_at\": \"2023-08-08T12:07:44.000000Z\",\n    \"created_at\": null,\n    \"updated_at\": null,\n    \"account\": {\n        \"id\": 10,\n        \"user_id\": 1,\n        \"available_balance\": \"1065.00\",\n        \"unavailable_balance\": \"0.00\",\n        \"created_at\": \"2023-08-08T12:07:44.000000Z\",\n        \"updated_at\": \"2023-08-08T12:39:06.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Make Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTE0OTYzMTksImV4cCI6MTY5MTQ5OTkxOSwibmJmIjoxNjkxNDk2MzE5LCJqdGkiOiJIQmhxMzZDbE5TajZUdlJiIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9gRaej72XVbNB7Mc1ouxbT84s2jXOODw5-ipuepEZxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"user\",\r\n    \"recipient_email\": \"remington.doyle@example.org\",\r\n    \"provider_id\": 2,\r\n    \"bank_id\": 9,\r\n    \"amount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "make transaction sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"bank\",\r\n    \"provider_id\": 2,\r\n    \"bank_id\": 9,\r\n    \"amount\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:35:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:35:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Transaction Logs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTE0OTYzMTksImV4cCI6MTY5MTQ5OTkxOSwibmJmIjoxNjkxNDk2MzE5LCJqdGkiOiJIQmhxMzZDbE5TajZUdlJiIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9gRaej72XVbNB7Mc1ouxbT84s2jXOODw5-ipuepEZxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"bank\",\r\n    \"amount\": 500,\r\n    \"provider_id\":2,\r\n    \"bank_id\":1,\r\n    \"to_email\":\"test@testy.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/transaction?page=1&perPage=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perPage",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transaction logs  sample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"bank\",\r\n    \"amount\": 500,\r\n    \"provider_id\":2,\r\n    \"bank_id\":1,\r\n    \"to_email\":\"test@testy.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/transaction?page=1&perPage=100",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:36:03 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:36:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 29,\n            \"amount\": -200,\n            \"previous_balance\": \"1065.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T13:35:35.000000Z\",\n            \"description\": \"Sent Money to Bank: UNION BANK OF THE PHILS via PESONet\"\n        },\n        {\n            \"id\": 21,\n            \"amount\": -3500,\n            \"previous_balance\": \"4565.00\",\n            \"created_at\": \"2023-08-08T12:39:06.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 14,\n            \"amount\": -3500,\n            \"previous_balance\": \"4565.00\",\n            \"created_at\": \"2023-08-08T12:39:06.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 7,\n            \"amount\": -3500,\n            \"previous_balance\": \"4565.00\",\n            \"created_at\": \"2023-08-08T12:39:06.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 28,\n            \"amount\": -3500,\n            \"previous_balance\": \"4565.00\",\n            \"created_at\": \"2023-08-08T12:39:06.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 20,\n            \"amount\": 3495,\n            \"previous_balance\": null,\n            \"created_at\": \"2023-08-08T12:37:04.000000Z\",\n            \"action\": \"add\",\n            \"description\": \"Received Money from User: wrollen0320@gmail.com\"\n        },\n        {\n            \"id\": 27,\n            \"amount\": 3495,\n            \"previous_balance\": null,\n            \"created_at\": \"2023-08-08T12:37:04.000000Z\",\n            \"action\": \"add\",\n            \"description\": \"Received Money from User: wrollen0320@gmail.com\"\n        },\n        {\n            \"id\": 13,\n            \"amount\": 3495,\n            \"previous_balance\": null,\n            \"created_at\": \"2023-08-08T12:37:04.000000Z\",\n            \"action\": \"add\",\n            \"description\": \"Received Money from User: wrollen0320@gmail.com\"\n        },\n        {\n            \"id\": 6,\n            \"amount\": 3495,\n            \"previous_balance\": null,\n            \"created_at\": \"2023-08-08T12:37:04.000000Z\",\n            \"action\": \"add\",\n            \"description\": \"Received Money from User: wrollen0320@gmail.com\"\n        },\n        {\n            \"id\": 19,\n            \"amount\": -25,\n            \"previous_balance\": \"1095.00\",\n            \"created_at\": \"2023-08-08T12:32:34.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: wrollepn0320@gmail.com\"\n        },\n        {\n            \"id\": 26,\n            \"amount\": -25,\n            \"previous_balance\": \"1095.00\",\n            \"created_at\": \"2023-08-08T12:32:34.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: wrollepn0320@gmail.com\"\n        },\n        {\n            \"id\": 5,\n            \"amount\": -25,\n            \"previous_balance\": \"1095.00\",\n            \"created_at\": \"2023-08-08T12:32:34.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: wrollepn0320@gmail.com\"\n        },\n        {\n            \"id\": 12,\n            \"amount\": -25,\n            \"previous_balance\": \"1095.00\",\n            \"created_at\": \"2023-08-08T12:32:34.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: wrollepn0320@gmail.com\"\n        },\n        {\n            \"id\": 11,\n            \"amount\": -10,\n            \"previous_balance\": \"1105.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:24.000000Z\",\n            \"description\": \"Sent Money to Bank: INDUSTRIAL BANK OF KOREA via PESONet\"\n        },\n        {\n            \"id\": 4,\n            \"amount\": -10,\n            \"previous_balance\": \"1105.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:24.000000Z\",\n            \"description\": \"Sent Money to Bank: INDUSTRIAL BANK OF KOREA via PESONet\"\n        },\n        {\n            \"id\": 18,\n            \"amount\": -10,\n            \"previous_balance\": \"1105.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:24.000000Z\",\n            \"description\": \"Sent Money to Bank: INDUSTRIAL BANK OF KOREA via PESONet\"\n        },\n        {\n            \"id\": 25,\n            \"amount\": -10,\n            \"previous_balance\": \"1105.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:24.000000Z\",\n            \"description\": \"Sent Money to Bank: INDUSTRIAL BANK OF KOREA via PESONet\"\n        },\n        {\n            \"id\": 24,\n            \"amount\": -3495,\n            \"previous_balance\": \"4600.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:10.000000Z\",\n            \"description\": \"Sent Money to Bank: PHIL NATIONAL BANK via InstaPay\"\n        },\n        {\n            \"id\": 3,\n            \"amount\": -3495,\n            \"previous_balance\": \"4600.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:10.000000Z\",\n            \"description\": \"Sent Money to Bank: PHIL NATIONAL BANK via InstaPay\"\n        },\n        {\n            \"id\": 17,\n            \"amount\": -3495,\n            \"previous_balance\": \"4600.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:10.000000Z\",\n            \"description\": \"Sent Money to Bank: PHIL NATIONAL BANK via InstaPay\"\n        },\n        {\n            \"id\": 10,\n            \"amount\": -3495,\n            \"previous_balance\": \"4600.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:32:10.000000Z\",\n            \"description\": \"Sent Money to Bank: PHIL NATIONAL BANK via InstaPay\"\n        },\n        {\n            \"id\": 2,\n            \"amount\": -200,\n            \"previous_balance\": \"4800.00\",\n            \"created_at\": \"2023-08-08T12:11:13.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 16,\n            \"amount\": -200,\n            \"previous_balance\": \"4800.00\",\n            \"created_at\": \"2023-08-08T12:11:13.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 23,\n            \"amount\": -200,\n            \"previous_balance\": \"4800.00\",\n            \"created_at\": \"2023-08-08T12:11:13.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 9,\n            \"amount\": -200,\n            \"previous_balance\": \"4800.00\",\n            \"created_at\": \"2023-08-08T12:11:13.000000Z\",\n            \"action\": \"sub\",\n            \"description\": \"Sent Money to User: remington.doyle@example.org\"\n        },\n        {\n            \"id\": 22,\n            \"amount\": -200,\n            \"previous_balance\": \"5000.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:08:47.000000Z\",\n            \"description\": \"Sent Money to Bank: UNION BANK OF THE PHILS via PESONet\"\n        },\n        {\n            \"id\": 15,\n            \"amount\": -200,\n            \"previous_balance\": \"5000.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:08:47.000000Z\",\n            \"description\": \"Sent Money to Bank: UNION BANK OF THE PHILS via PESONet\"\n        },\n        {\n            \"id\": 8,\n            \"amount\": -200,\n            \"previous_balance\": \"5000.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:08:47.000000Z\",\n            \"description\": \"Sent Money to Bank: UNION BANK OF THE PHILS via PESONet\"\n        },\n        {\n            \"id\": 1,\n            \"amount\": -200,\n            \"previous_balance\": \"5000.00\",\n            \"action\": \"sub\",\n            \"created_at\": \"2023-08-08T12:08:47.000000Z\",\n            \"description\": \"Sent Money to Bank: UNION BANK OF THE PHILS via PESONet\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/transaction?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/transaction?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/transaction?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/transaction\",\n    \"per_page\": 100,\n    \"prev_page_url\": null,\n    \"to\": 29,\n    \"total\": 29\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Providers with relationships",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTE0MzU2NzEsImV4cCI6MTY5MTQzOTI3MSwibmJmIjoxNjkxNDM1NjcxLCJqdGkiOiJ6aVYwVW9xRTluS1pDVGFPIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UBggld6pzpqKbCyzNM4KcUzCov2jESCjlqY4zhQVedc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"bank\",\r\n    \"amount\": 500,\r\n    \"provider_id\":2,\r\n    \"bank_id\":1,\r\n    \"to_email\":\"test@testy.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/provider",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"provider"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get providers example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"bank\",\r\n    \"amount\": 500,\r\n    \"provider_id\":2,\r\n    \"bank_id\":1,\r\n    \"to_email\":\"test@testy.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/provider",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"provider"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:36:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Aug 2023 13:36:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"DisabledProvider Demo\",\n        \"is_disabled\": 1,\n        \"is_active\": 1,\n        \"banks\": [\n            {\n                \"id\": 26,\n                \"name\": \"BANK OF CHINA (HONGKONG) LIMITED\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 26\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"BANK OF THE PHIL ISLANDS\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 3\n                }\n            },\n            {\n                \"id\": 12,\n                \"name\": \"CITIBANK, N.A.\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 12\n                }\n            },\n            {\n                \"id\": 23,\n                \"name\": \"CTBC BANK (PHILIPPINES) CORP\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 23\n                }\n            },\n            {\n                \"id\": 8,\n                \"name\": \"DEVELOPMENT BANK OF THE PHIL\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 8\n                }\n            },\n            {\n                \"id\": 21,\n                \"name\": \"MUFG BANK, LTD.\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 21\n                }\n            },\n            {\n                \"id\": 18,\n                \"name\": \"PHIL BANK OF COMMUNICATIONS\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 18\n                }\n            },\n            {\n                \"id\": 10,\n                \"name\": \"SECURITY BANK CORP\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 3,\n                    \"bank_id\": 10\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 1,\n        \"name\": \"InstaPay\",\n        \"is_disabled\": 0,\n        \"is_active\": 1,\n        \"banks\": [\n            {\n                \"id\": 13,\n                \"name\": \"ASIA UNITED BANK CORPORATION\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 13\n                }\n            },\n            {\n                \"id\": 1,\n                \"name\": \"BDO UNIBANK INC\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 1\n                }\n            },\n            {\n                \"id\": 5,\n                \"name\": \"CHINA BANKING CORP\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 5\n                }\n            },\n            {\n                \"id\": 27,\n                \"name\": \"DEUTSCHE BANK AG\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 27\n                }\n            },\n            {\n                \"id\": 34,\n                \"name\": \"ING BANK N.V.\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 34\n                }\n            },\n            {\n                \"id\": 7,\n                \"name\": \"PHIL NATIONAL BANK\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 7\n                }\n            },\n            {\n                \"id\": 17,\n                \"name\": \"PHIL TRUST COMPANY\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 17\n                }\n            },\n            {\n                \"id\": 6,\n                \"name\": \"RIZAL COMM'L BANKING CORP\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 6\n                }\n            },\n            {\n                \"id\": 16,\n                \"name\": \"ROBINSONS BANK CORPORATION\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 1,\n                    \"bank_id\": 16\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"PESONet\",\n        \"is_disabled\": 0,\n        \"is_active\": 1,\n        \"banks\": [\n            {\n                \"id\": 11,\n                \"name\": \"EAST WEST BANKING CORP\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 11\n                }\n            },\n            {\n                \"id\": 39,\n                \"name\": \"INDUSTRIAL BANK OF KOREA\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 39\n                }\n            },\n            {\n                \"id\": 25,\n                \"name\": \"JP MORGAN CHASE BANK NATIONAL ASSN.\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 25\n                }\n            },\n            {\n                \"id\": 2,\n                \"name\": \"LAND BANK OF THE PHILIPPINES\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 2\n                }\n            },\n            {\n                \"id\": 28,\n                \"name\": \"SUMITOMO MITSUI BANKING CORPORATION\",\n                \"is_disabled\": 1,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 28\n                }\n            },\n            {\n                \"id\": 9,\n                \"name\": \"UNION BANK OF THE PHILS\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 9\n                }\n            },\n            {\n                \"id\": 42,\n                \"name\": \"UNITED OVERSEAS BANK LIMITED\",\n                \"is_disabled\": 0,\n                \"is_active\": 1,\n                \"pivot\": {\n                    \"provider_id\": 2,\n                    \"bank_id\": 42\n                }\n            }\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
