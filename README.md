@@ -100,6 +100,7 @@ The API includes an audit log trail that traces every route access of the user. 
 The `TransactionConstant` class compiles error messages and constants, enabling API responses to be customized without altering the logic code.
 
 ### API Routes
+Note: Please be aware that authentication is required to access the routes, with the exception of the login route. Upon successful login, you will receive an access token, which should be added to the authorization bearer header for subsequent authenticated requests.
 
 #### POST: /api/auth/login
 
