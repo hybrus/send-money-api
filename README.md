@@ -134,3 +134,11 @@ The `TransactionConstant` class compiles error messages and constants, enabling 
 ### Postman Collection
 
 A Postman collection (`postman_collection.json`) is included in the repository. You can import this collection into Postman to easily test the API endpoints.
+
+
+### Creadentials
+
+- Email: wrollen0320@gmail.com
+- Password: password
+
+Alternatively, you can use the credentials from the `user` table created and seeded by the `send-money-api`. Choose an email from the table and use the password `password` for authentication.
