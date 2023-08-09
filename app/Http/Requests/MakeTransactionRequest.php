@@ -28,8 +28,13 @@ class MakeTransactionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "type" => "string|required|in:bank,user",
-            "recipient_email" =>  ["email", "required_if:type,user", new NotCurrentUserEmail],
+            "type" => "string|required|in:" . implode(',', TransactionConstant::Types),
+            "recipient_email" =>  [
+                "email",
+                "required_if:type,user",
+                new NotCurrentUserEmail,
+                Rule::exists('users', 'email')
+            ],
 
             "provider_id" => [
                 "integer",
@@ -53,6 +58,7 @@ class MakeTransactionRequest extends FormRequest
     {
         return [
             'bank_id.exists' => 'The selected bank is not valid for the chosen provider.',
+            'recipient_email.exists' => "The recipient email does not exist.",
             // Add other custom validation messages as needed
         ];
     }
