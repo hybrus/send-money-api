@@ -18,12 +18,12 @@ class BankSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $banks = [
-            ["name" => "BDO UNIBANK INC", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
-            ["name" => "LAND BANK OF THE PHILIPPINES", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
-            ["name" => "BANK OF THE PHIL ISLANDS", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
-            ["name" => "METROPOLITAN BANK & TCO", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
-            ["name" => "CHINA BANKING CORP", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
-            ["name" => "RIZAL COMM'L BANKING CORP", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
+            ["name" => "BDO UNIBANK INC", "is_active" => true, "is_disabled" => false],
+            ["name" => "LAND BANK OF THE PHILIPPINES", "is_active" => true, "is_disabled" => false],
+            ["name" => "BANK OF THE PHIL ISLANDS", "is_active" => true, "is_disabled" => true],
+            ["name" => "METROPOLITAN BANK & TCO", "is_active" => true, "is_disabled" => true],
+            ["name" => "CHINA BANKING CORP", "is_active" => false, "is_disabled" => true],
+            ["name" => "RIZAL COMM'L BANKING CORP", "is_active" => false, "is_disabled" => true],
             ["name" => "PHIL NATIONAL BANK", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
             ["name" => "DEVELOPMENT BANK OF THE PHIL", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
             ["name" => "UNION BANK OF THE PHILS", "is_active" => array_rand([0, 1]), "is_disabled" => array_rand([0, 1])],
